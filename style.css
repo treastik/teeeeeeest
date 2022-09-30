@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*Navigacne menu*/
+.main-bar {
+    background-color: #22272b !important;
+    display: flow-root;
+    padding:  0 10%;
+    
+}
+
+#check {
+    display: none;
+}
+
+.logo-header {
+    display: table;
+    float: left;
+    vertical-align: middle;
+    padding: 0;
+    color: #024084;
+    margin:0;
+    width: 180px;
+    height: 68px;
+    position: relative;
+    z-index: 9;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.logo-header:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    z-index: -1;
+    right: -50px;
+    width: 80%;
+    transform: skew(30deg);
+    background-color: #024084;
+}
+
+.logo-header:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    z-index: -1;
+    right: 10%;
+    width: 2000px;
+    background-color:  #024084;
+}
+
+.logo-header a {
+    color: #12cdee;
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 70px;
+    text-decoration: none;
+    
+}
+
+.title {
+    color: white;
+}
+
+.title,.logo-header a {
+    font-family: 'Playfair Display SC', serif;
+}
+
+ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 70px;
+    border-radius: 14px;
+}
+
+nav li.active a {
+    color: white;
+    background-color:  #024084;
+    border-radius: 14px;
+}
+
+nav li a {
+    padding: 15px 25px;
+    border: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 1;
+    text-decoration: none;
+    transition: all 0.5s;
+    border-radius: 14px;
+}
+
+nav li:hover a {
+    color: white;
+    background-color:  #024084;
+    border-radius: 14px;
+}
+
+.checkbtn {
+    float: right;
+    width: 20px;
+    height: 18px;
+    position: relative;
+    transform: rotate(0);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    top: 25px;
+    display: none;
+}
+
+.checkbtn span {
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0);
+    transition: 0.25s ease-in-out;
+  }
+
+.checkbtn span:nth-child(1) {
+    top: 0;
+    }
+.checkbtn span:nth-child(2) {
+    top: 7px;
+    }
+.checkbtn span:nth-child(3) {
+    top: 14px;
+    }
+
+
+/*resp. navig.*/
+
+@media(max-width: 992px) {
+    .main-bar {
+        padding: 0 10%;
+    }
+    .checkbtn {
+        display: block;
+        margin-right: 40px;
+    }
+    nav ul {
+        position: fixed;
+        width: 350px;
+        height: 100vh;
+        background: #22272b;
+        top: 68px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+@media (max-width: 1250px) {
+    .main-bar {
+        padding: 0 2%;
+    }
+    nav li a {
+       padding: 15px 20px;
+    }   
+}
+
+@media(max-width:560px) {
+    nav ul {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+/*responzivny dizajn navigacie*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*main sekcia*/
+.hero {
+    height:100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0,0,25,0.9), rgba(0,0,25,0.9)),url('img/img4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    color:#fff;
+    z-index: -2;
+
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 8px;
+    text-align: center;
+    margin-top: -100px;
+    font-family: 'Merienda', cursive;
+}
+
+
+#focus {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    z-index: 1;
+    background: url('img/img4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 50%;
+    top: calc(50% - 140px);
+    left: calc(50% - 140px);
+    z-index: 0;
+}
+
+
+
+.second-title {
+    text-align: center;
+    margin: 20px;
+    letter-spacing: 6px;
+    line-height: 64px;
+    color:white;
+    text-shadow: 2px 2px 0 black;
+}
+
+.main-p {
+    font-family: serif;
+    color:white;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 18px;
+    margin: 3px;
+    padding: 5px;
+    text-shadow: 2px 2px 0 black;
+    border-radius: 20px 40px;
+  
+   
+}
